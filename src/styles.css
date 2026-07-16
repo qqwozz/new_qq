@@ -402,3 +402,28 @@ footer {
   .name { font-size: 42px; }
   .project-name { font-size: 34px; }
 }
+
+@media (max-width: 320px) {
+  body { font-size: 17px; }
+  .wrap { padding: 0 16px; }
+  .name { font-size: 36px; }
+  .role { font-size: 16px; }
+  .bio { font-size: 18px; line-height: 1.7; }
+  .contact { font-size: 14px; gap: 8px 18px; }
+  .cv-download { font-size: 13px; padding: 10px 22px; }
+  .skills, .experience, .work, .languages, .contact-section { padding-top: 80px; }
+  .label { margin-bottom: 40px; }
+  .skill-row { font-size: 16px; padding: 16px 0; }
+  .skill-row dt { font-size: 11px; }
+  .job-title { font-size: 24px; }
+  .job-points li { font-size: 16px; }
+  .project-name { font-size: 28px; }
+  .project-points li { font-size: 17px; }
+  .project { padding: 48px 0; }
+  .contact-headline { font-size: 28px; }
+  .contact-sub { font-size: 16px; }
+  .lang-list { font-size: 16px; gap: 8px 24px; }
+  .lang-switch { top: 16px; right: 16px; font-size: 13px; }
+  footer { padding-top: 72px; margin-top: 60px; }
+  .foot-links { gap: 16px; font-size: 13px; }
+}
