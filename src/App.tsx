@@ -235,7 +235,7 @@ function App() {
                 <span className="sep" aria-hidden="true">·</span>
                 <a href="mailto:offconix@gmail.com">Email</a>
               </nav>
-              <a href={`${import.meta.env.BASE_URL}Dima_Kiselev_Resume.pdf`} download className="cv-download">
+              <a href={`${import.meta.env.BASE_URL}qq/Dima_Kiselev_Resume.pdf`} download className="cv-download">
                 {s.downloadCv}
               </a>
             </div>
