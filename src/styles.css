@@ -203,23 +203,14 @@ a:hover .arrow.right { transform: translate(4px, 0); }
   position: relative;
   text-wrap: pretty;
 }
-.job-points li::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: -8px;
-  transform: translateX(-50%);
-  width: 10px;
-  height: 1px;
-  background: var(--muted);
-}
 
 /* ─── Projects ─── */
 .work { padding: 180px 0 0 0; }
 .projects { display: flex; flex-direction: column; }
-.project { padding: 90px 0; border-top: 1px solid var(--hairline); text-align: center; }
+.project { padding: 90px 0; border-top: 1px solid var(--hairline); text-align: center; transition: background 200ms ease; border-radius: 8px; }
 .project:first-of-type { padding-top: 8px; border-top: 0; }
 .project:last-of-type { padding-bottom: 8px; }
+.project:hover { background: rgba(0, 0, 0, 0.012); }
 
 .project-name {
   font-family: var(--serif);
@@ -229,7 +220,7 @@ a:hover .arrow.right { transform: translate(4px, 0); }
   letter-spacing: -0.02em;
   margin: 0 0 16px 0;
 }
-.project-name a { border-bottom: 1px solid transparent; padding-bottom: 2px; }
+.project-name a { border-bottom: 1px solid transparent; padding-bottom: 2px; transition: border-color 200ms ease, color 200ms ease; }
 .project-name a:hover { border-bottom-color: var(--ink); }
 
 .project-meta { font-size: 15px; color: var(--muted); margin: 0 0 44px 0; text-align: center; }
@@ -252,16 +243,6 @@ a:hover .arrow.right { transform: translate(4px, 0); }
   text-wrap: pretty;
   padding-left: 0;
   position: relative;
-}
-.project-points li::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: -10px;
-  transform: translateX(-50%);
-  width: 10px;
-  height: 1px;
-  background: var(--muted);
 }
 
 .stack {
@@ -426,4 +407,19 @@ footer {
   .lang-switch { top: 16px; right: 16px; font-size: 13px; }
   footer { padding-top: 72px; margin-top: 60px; }
   .foot-links { gap: 16px; font-size: 13px; }
+}
+
+/* ─── Print ─── */
+@media print {
+  body { font-size: 12pt; background: #fff; }
+  .lang-switch, .scroll-top, .cursor, .cv-download { display: none !important; }
+  .reveal { opacity: 1 !important; transform: none !important; }
+  a { border-bottom: none !important; }
+  a[href]::after { content: " (" attr(href) ")"; font-size: 0.8em; color: #666; }
+  nav.contact a[href]::after, .foot-links a[href]::after { content: none; }
+  .hero { padding-top: 0; }
+  .skills, .experience, .work, .languages, .contact-section { padding-top: 48px; }
+  footer { padding-top: 24px; margin-top: 24px; }
+  .project { page-break-inside: avoid; }
+  .job { page-break-inside: avoid; }
 }

@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useMemo, useRef } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 
 type Lang = 'ru' | 'en'
 
@@ -60,7 +60,7 @@ const t: Record<Lang, Record<string, string>> = {
     enLvl: 'B1',
     czLang: 'Чешский',
     czLvl: 'A1',
-    footerMeta: 'Дима Киселев · Москва · 2026',
+    footerMeta: `Дима Киселев · Москва · ${new Date().getFullYear()}`,
   },
   en: {
     name: 'Dima Kiselev',
@@ -119,16 +119,19 @@ const t: Record<Lang, Record<string, string>> = {
     enLvl: 'B1',
     czLang: 'Czech',
     czLvl: 'A1',
-    footerMeta: 'Dima Kiselev · Moscow · 2026',
+    footerMeta: `Dima Kiselev · Moscow · ${new Date().getFullYear()}`,
   },
 }
 
-function Typewriter({ text, speed = 30 }: { text: string; speed?: number }) {
-  const [displayed, setDisplayed] = useState('')
-  const [done, setDone] = useState(false)
-  const indexRef = useRef(0)
+function Typewriter({ text, speed = 25 }: { text: string; speed?: number }) {
+  const [displayed, setDisplayed] = useState(text)
+  const [done, setDone] = useState(true)
+  const indexRef = useRef(text.length)
+  const prevTextRef = useRef(text)
 
   useEffect(() => {
+    if (prevTextRef.current === text) return
+    prevTextRef.current = text
     setDisplayed('')
     setDone(false)
     indexRef.current = 0
@@ -169,29 +172,33 @@ function App() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  const observer = useMemo(() => {
-    return new IntersectionObserver(
+  const observerRef = useRef<IntersectionObserver | null>(null)
+
+  useEffect(() => {
+    observerRef.current = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('visible')
-            observer.unobserve(entry.target)
+            observerRef.current?.unobserve(entry.target)
           }
         })
       },
       { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
     )
+    return () => observerRef.current?.disconnect()
   }, [])
 
   useEffect(() => {
+    if (!observerRef.current) return
     const timer = setTimeout(() => {
-      document.querySelectorAll('.reveal').forEach((el) => observer.observe(el))
+      document.querySelectorAll('.reveal').forEach((el) => observerRef.current!.observe(el))
     }, 50)
     return () => {
       clearTimeout(timer)
-      observer.disconnect()
+      observerRef.current?.disconnect()
     }
-  }, [lang, observer])
+  }, [lang])
 
   const scrollToTop = useCallback(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
