@@ -165,13 +165,12 @@ a:hover .arrow.right { transform: translate(4px, 0); }
   border-top: 1px solid var(--hairline);
   font-size: 19px;
   line-height: 1.75;
-  transition: background 200ms ease, padding-left 200ms ease;
+  transition: background 200ms ease;
   border-radius: 4px;
   text-align: center;
 }
 .skill-row:hover {
   background: rgba(0, 0, 0, 0.015);
-  padding-left: 8px;
 }
 .skill-row:first-child { border-top: 0; }
 .skill-row dt {
@@ -303,7 +302,7 @@ a:hover .arrow.right { transform: translate(4px, 0); }
   margin: 0 0 40px 0;
   text-align: center;
 }
-.contact-cta { margin: 0; }
+.contact-cta { margin: 0; display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
 
 /* ─── Scroll to Top ─── */
 .scroll-top {

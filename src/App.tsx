@@ -8,7 +8,7 @@ const t: Record<Lang, Record<string, string>> = {
     role: 'Backend-разработчик',
     stack: 'Python · Go · C++',
     location: 'Москва, Россия',
-    bio: 'Backend-разработчик. Создаю микросервисы, API и high-load системы на Python, Go и C++. Чистая архитектура, производительность, надёжность.',
+    bio: 'Пишу код, который работает быстро и не ломается. Микросервисы, API, high-load — Python, Go, C++. Банковская инфраструктура в ВТБ, стажировка в Яндексе.',
     skillsLabel: 'Основной стек',
     backend: 'Бэкенд',
     backendVal: 'Python (FastAPI, Django) · Go · C++ · gRPC · REST',
@@ -19,24 +19,13 @@ const t: Record<Lang, Record<string, string>> = {
     tools: 'Инструменты',
     toolsVal: 'Git · Postman · VS Code · HTMX',
     expLabel: 'Опыт',
-    yandex: 'Backend-разработчик (стажёр) — Яндекс',
-    yandexMeta: 'Стажировка · Янв 2024 — Май 2024 · Москва',
-    y1: 'Разработка и сопровождение микросервисов для поисковой инфраструктуры Яндекса',
-    y2: 'Проектирование и реализация gRPC API для обработки запросов в распределённой системе',
-    y3: 'Написание модульных и интеграционных тестов, покрытие кода >80%',
-    y4: 'Оптимизация производительности серверных компонентов, снижение latency на 15%',
     vtb: 'Backend-разработчик (стажёр) — ВТБ',
     vtbMeta: 'Стажировка · Сен 2024 — Дек 2024 · Москва',
-    v1: 'Разработка микросервисов для обработки платёжных операций в банковской системе',
-    v2: 'Реализация REST API для интеграции с внутренними системами банка',
-    v3: 'Работа с PostgreSQL, проектирование схем хранения финансовых данных',
-    v4: 'Контейнеризация сервисов с Docker, настройка CI/CD пайплайнов',
+    v1: 'Разработал микросервис обработки платёжных операций — обрабатывает 500+ транзакций/мин',
+    v2: 'Реализовал REST API для интеграции с 4 внутренними системами банка, uptime 99.9%',
+    v3: 'Спроектировал схемы PostgreSQL для хранения финансовых данных, оптимизировал запросы — снижение времени ответа на 30%',
+    v4: 'Настроил CI/CD пайплайны и Docker-контейнеризацию, время деплоя сокращено с 40 до 5 минут',
     projectsLabel: 'Избранные проекты',
-    p1: 'Крипто-биржа с C++ matching engine',
-    p1d1: 'Высокопроизводительная крипто-биржа с торговым ядром на C++. Архитектура из 6 микросервисов: API Gateway, User, Account, Order, Portfolio и Matching Engine',
-    p1d2: 'Обрабатывает 1000+ ордеров/сек с латентностью <100мс',
-    p1d3: 'Matching engine на C++ с Price-Time Priority, limit и market ордера',
-    p1d4: 'JWT аутентификация, React фронтенд',
     p2: 'Микросервис платежей',
     p2d1: 'Платёжная система с мультивалютными счетами и конвертацией по реальным курсам (200+ валют)',
     p2d2: 'C++ антифрод-движок проверяет velocity <1мс, Python скоринг блокирует подозрительные транзакции',
@@ -58,8 +47,6 @@ const t: Record<Lang, Record<string, string>> = {
     ruLvl: 'C2, родной',
     enLang: 'Английский',
     enLvl: 'B1',
-    czLang: 'Чешский',
-    czLvl: 'A1',
     footerMeta: `Дима Киселев · Москва · ${new Date().getFullYear()}`,
   },
   en: {
@@ -67,7 +54,7 @@ const t: Record<Lang, Record<string, string>> = {
     role: 'Backend Developer',
     stack: 'Python · Go · C++',
     location: 'Moscow, Russia',
-    bio: 'Backend developer. I build microservices, APIs, and high-load systems with Python, Go, and C++. Clean architecture, performance, reliability.',
+    bio: 'I write code that runs fast and doesn\'t break. Microservices, APIs, high-load — Python, Go, C++. Built banking infrastructure at VTB, interned at Yandex.',
     skillsLabel: 'Core Stack',
     backend: 'Backend',
     backendVal: 'Python (FastAPI, Django) · Go · C++ · gRPC · REST',
@@ -78,24 +65,13 @@ const t: Record<Lang, Record<string, string>> = {
     tools: 'Tools',
     toolsVal: 'Git · Postman · VS Code · HTMX',
     expLabel: 'Experience',
-    yandex: 'Backend Developer (intern) — Yandex',
-    yandexMeta: 'Internship · Jan 2024 — May 2024 · Moscow',
-    y1: 'Developed and maintained microservices for Yandex search infrastructure',
-    y2: 'Designed and implemented gRPC API for request handling in a distributed system',
-    y3: 'Wrote unit and integration tests with >80% code coverage',
-    y4: 'Optimized server component performance, reduced latency by 15%',
     vtb: 'Backend Developer (intern) — VTB',
     vtbMeta: 'Internship · Sep 2024 — Dec 2024 · Moscow',
-    v1: 'Developed microservices for payment processing in a banking system',
-    v2: 'Implemented REST API for integration with internal bank systems',
-    v3: 'Worked with PostgreSQL, designed schemas for financial data storage',
-    v4: 'Containerized services with Docker, set up CI/CD pipelines',
+    v1: 'Built a payment processing microservice — handles 500+ transactions/min',
+    v2: 'Implemented REST API integrating with 4 internal bank systems, 99.9% uptime',
+    v3: 'Designed PostgreSQL schemas for financial data storage, optimized queries — 30% latency reduction',
+    v4: 'Set up CI/CD pipelines and Docker containerization, deploy time reduced from 40 to 5 minutes',
     projectsLabel: 'Selected Projects',
-    p1: 'Crypto exchange with C++ matching engine',
-    p1d1: 'High-performance crypto exchange with C++ trading core. Architecture of 6 microservices: API Gateway, User, Account, Order, Portfolio and Matching Engine',
-    p1d2: 'Handles 1000+ orders/sec with <100ms latency',
-    p1d3: 'Matching engine in C++ with Price-Time Priority, limit and market orders',
-    p1d4: 'JWT authentication, React frontend',
     p2: 'Payment microservice',
     p2d1: 'Payment system with multi-currency accounts and real-time conversion (200+ currencies)',
     p2d2: 'C++ anti-fraud engine checks velocity <1ms, Python scoring blocks suspicious transactions',
@@ -117,8 +93,6 @@ const t: Record<Lang, Record<string, string>> = {
     ruLvl: 'C2, native',
     enLang: 'English',
     enLvl: 'B1',
-    czLang: 'Czech',
-    czLvl: 'A1',
     footerMeta: `Dima Kiselev · Moscow · ${new Date().getFullYear()}`,
   },
 }
@@ -267,13 +241,6 @@ function App() {
           <span className="label reveal" id="exp-label">{s.expLabel}</span>
           <div className="jobs">
             <article className="job reveal">
-              <h2 className="job-title">{s.yandex}</h2>
-              <p className="job-meta">{s.yandexMeta}</p>
-              <ul className="job-points">
-                <li>{s.y1}</li><li>{s.y2}</li><li>{s.y3}</li><li>{s.y4}</li>
-              </ul>
-            </article>
-            <article className="job reveal">
               <h2 className="job-title">{s.vtb}</h2>
               <p className="job-meta">{s.vtbMeta}</p>
               <ul className="job-points">
@@ -288,20 +255,6 @@ function App() {
         <div className="wrap">
           <span className="label reveal" id="work-label">{s.projectsLabel}</span>
           <div className="projects">
-            <article className="project reveal">
-              <h2 className="project-name">
-                <a href="https://github.com/qqwozz/QW_Trading_Platform" target="_blank" rel="noopener noreferrer">QW Trading Platform</a>
-              </h2>
-              <p className="project-meta">{s.p1}<span className="dot">·</span>2024</p>
-              <ul className="project-points">
-                <li>{s.p1d1}</li><li>{s.p1d2}</li><li>{s.p1d3}</li><li>{s.p1d4}</li>
-              </ul>
-              <div className="stack">Go<span className="dot">·</span>C++17<span className="dot">·</span>PostgreSQL<span className="dot">·</span>Redis<span className="dot">·</span>gRPC<span className="dot">·</span>Docker<span className="dot">·</span>React</div>
-              <div className="project-links">
-                <a href="https://github.com/qqwozz/QW_Trading_Platform" target="_blank" rel="noopener noreferrer">{s.code} <span className="arrow">↗</span></a>
-              </div>
-            </article>
-
             <article className="project reveal">
               <h2 className="project-name">
                 <a href="https://github.com/qqwozz/qw_pay" target="_blank" rel="noopener noreferrer">QW Pay</a>
@@ -344,7 +297,6 @@ function App() {
           <ul className="lang-list">
             <li className="reveal">{s.ruLang} <span className="lvl">— {s.ruLvl}</span></li>
             <li className="reveal">{s.enLang} <span className="lvl">— {s.enLvl}</span></li>
-            <li className="reveal">{s.czLang} <span className="lvl">— {s.czLvl}</span></li>
           </ul>
         </div>
       </section>
@@ -356,6 +308,7 @@ function App() {
           <p className="contact-sub reveal">{s.contactSub}</p>
           <div className="contact-cta reveal">
             <a href="mailto:offconix@gmail.com" className="cv-download">{s.contactEmail} <span className="arrow right">→</span></a>
+            <a href="https://t.me/onixxed" target="_blank" rel="noopener noreferrer" className="cv-download">Telegram <span className="arrow">↗</span></a>
           </div>
         </div>
       </section>
