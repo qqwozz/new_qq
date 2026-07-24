@@ -21,10 +21,12 @@ const t: Record<Lang, Record<string, string>> = {
     expLabel: 'Опыт',
     vtb: 'Backend-разработчик (стажёр) — ВТБ',
     vtbMeta: 'Стажировка · Сен 2024 — Дек 2024 · Москва',
-    v1: 'Разработал микросервис обработки платёжных операций — обрабатывает 500+ транзакций/мин',
-    v2: 'Реализовал REST API для интеграции с 4 внутренними системами банка, uptime 99.9%',
-    v3: 'Спроектировал схемы PostgreSQL для хранения финансовых данных, оптимизировал запросы — снижение времени ответа на 30%',
-    v4: 'Настроил CI/CD пайплайны и Docker-контейнеризацию, время деплоя сокращено с 40 до 5 минут',
+    v1: 'Разрабатывал высоконагруженный API-шлюз на Go (Gin, gRPC) — >1000 RPS',
+    v2: 'Разбор 10+ инцидентов L2: анализ логов в ELK, выявление первопричин, 2 решения внесены в базу знаний',
+    v3: 'Дашборды в Grafana (CPU, память, latency) и алерты в Prometheus с пороговыми значениями',
+    v4: 'Оптимизация SQL-запросов (JOIN, оконные функции) для PostgreSQL и Oracle, проверка целостности после миграций',
+    v5: '5+ Python-скриптов для автоматического сбора логов — сокращение ручной проверки на 40%',
+    v6: 'Техническая документация, регламенты мониторинга, спринты и задачи в Jira/Confluence',
     eduLabel: 'Образование',
     edu1: 'Факультет информационных технологий',
     edu1Meta: 'Бакалавр · 2025 — н.в.',
@@ -80,10 +82,12 @@ const t: Record<Lang, Record<string, string>> = {
     expLabel: 'Experience',
     vtb: 'Backend Developer (intern) — VTB',
     vtbMeta: 'Internship · Sep 2024 — Dec 2024 · Moscow',
-    v1: 'Built a payment processing microservice — handles 500+ transactions/min',
-    v2: 'Implemented REST API integrating with 4 internal bank systems, 99.9% uptime',
-    v3: 'Designed PostgreSQL schemas for financial data storage, optimized queries — 30% latency reduction',
-    v4: 'Set up CI/CD pipelines and Docker containerization, deploy time reduced from 40 to 5 minutes',
+    v1: 'Built high-load API gateway on Go (Gin, gRPC) — handling >1000 RPS',
+    v2: 'Resolved 10+ L2 incidents: ELK log analysis, root cause identification, 2 solutions added to knowledge base',
+    v3: 'Grafana dashboards (CPU, memory, latency) and Prometheus alerts with threshold values',
+    v4: 'Optimized complex SQL queries (JOINs, window functions) for PostgreSQL and Oracle, post-migration data integrity checks',
+    v5: '5+ Python scripts for automated log collection — reduced manual review time by 40%',
+    v6: 'Technical documentation, monitoring runbooks, sprint planning and Jira/Confluence task tracking',
     eduLabel: 'Education',
     edu1: 'Faculty of Information Technology',
     edu1Meta: "Bachelor's · 2020 — 2024",
@@ -270,7 +274,7 @@ function App() {
               <h2 className="job-title">{s.vtb}</h2>
               <p className="job-meta">{s.vtbMeta}</p>
               <ul className="job-points">
-                <li>{s.v1}</li><li>{s.v2}</li><li>{s.v3}</li><li>{s.v4}</li>
+                <li>{s.v1}</li><li>{s.v2}</li><li>{s.v3}</li><li>{s.v4}</li><li>{s.v5}</li><li>{s.v6}</li>
               </ul>
             </article>
           </div>
