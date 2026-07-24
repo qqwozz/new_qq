@@ -208,6 +208,8 @@ function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [])
 
+  const pdfFile = lang === 'ru' ? 'Dima_Kiselev_Resume.pdf' : 'Dima_Kiselev_Resume_en.pdf'
+
   return (
     <main>
       <nav className="lang-switch" aria-label="Language">
@@ -246,7 +248,7 @@ function App() {
                 <span className="sep" aria-hidden="true">·</span>
                 <a href="mailto:offconix@gmail.com">Email</a>
               </nav>
-              <a href={`${import.meta.env.BASE_URL}qq/Dima_Kiselev_Resume.pdf`} download className="cv-download">
+              <a href={`${import.meta.env.BASE_URL}qq/${pdfFile}`} download className="cv-download">
                 {s.downloadCv}
               </a>
             </div>
