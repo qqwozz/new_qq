@@ -126,7 +126,7 @@ def generate():
     y = section(c, y, "Опыт")
     y = job(c, y,
         "Backend-разработчик (стажёр) — ВТБ",
-        "Стажировка · Сен 2024 — Дек 2024 · Москва",
+        "Стажировка · Сен 2025 — Июн 2026 · Москва",
         [
             "Разрабатывал высоконагруженный API-шлюз на Go (Gin, gRPC) — >1000 RPS",
             "Разбор 10+ инцидентов L2: анализ логов в ELK, 2 решения внесены в базу знаний",
@@ -147,7 +147,7 @@ def generate():
     y = job(c, y,
         "Дополнительные курсы",
         "2022 — н.в.",
-        ["Яндекс Лицей · IT Школа Samsung · Популярный курс по Git · Популярный курс по Go"]
+        ["Яндекс Лицей · IT Школа Samsung · Version Control with Git (Coursera) · Programming with Google Go (Coursera) · Grokking System Design Interview (Educative)"]
     )
 
     # ─── Projects ───
