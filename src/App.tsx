@@ -18,19 +18,6 @@ const t: Record<Lang, Record<string, string>> = {
     infraVal: 'Docker · Linux · Nginx · Gunicorn · GitHub Actions CI/CD',
     tools: 'Инструменты',
     toolsVal: 'Git · Postman · VS Code · HTMX',
-    expLabel: 'Опыт',
-    yandex: 'Backend-разработчик (стажёр) — Яндекс',
-    yandexMeta: 'Стажировка · Янв 2024 — Май 2024 · Москва',
-    y1: 'Разработка и сопровождение микросервисов для поисковой инфраструктуры Яндекса',
-    y2: 'Проектирование и реализация gRPC API для обработки запросов в распределённой системе',
-    y3: 'Написание модульных и интеграционных тестов, покрытие кода >80%',
-    y4: 'Оптимизация производительности серверных компонентов, снижение latency на 15%',
-    vtb: 'Backend-разработчик (стажёр) — ВТБ',
-    vtbMeta: 'Стажировка · Сен 2024 — Дек 2024 · Москва',
-    v1: 'Разработка микросервисов для обработки платёжных операций в банковской системе',
-    v2: 'Реализация REST API для интеграции с внутренними системами банка',
-    v3: 'Работа с PostgreSQL, проектирование схем хранения финансовых данных',
-    v4: 'Контейнеризация сервисов с Docker, настройка CI/CD пайплайнов',
     projectsLabel: 'Избранные проекты',
     p1: 'Крипто-биржа с C++ matching engine',
     p1d1: 'Высокопроизводительная крипто-биржа с торговым ядром на C++. Архитектура из 6 микросервисов: API Gateway, User, Account, Order, Portfolio и Matching Engine',
@@ -77,19 +64,6 @@ const t: Record<Lang, Record<string, string>> = {
     infraVal: 'Docker · Linux · Nginx · Gunicorn · GitHub Actions CI/CD',
     tools: 'Tools',
     toolsVal: 'Git · Postman · VS Code · HTMX',
-    expLabel: 'Experience',
-    yandex: 'Backend Developer (intern) — Yandex',
-    yandexMeta: 'Internship · Jan 2024 — May 2024 · Moscow',
-    y1: 'Developed and maintained microservices for Yandex search infrastructure',
-    y2: 'Designed and implemented gRPC API for request handling in a distributed system',
-    y3: 'Wrote unit and integration tests with >80% code coverage',
-    y4: 'Optimized server component performance, reduced latency by 15%',
-    vtb: 'Backend Developer (intern) — VTB',
-    vtbMeta: 'Internship · Sep 2024 — Dec 2024 · Moscow',
-    v1: 'Developed microservices for payment processing in a banking system',
-    v2: 'Implemented REST API for integration with internal bank systems',
-    v3: 'Worked with PostgreSQL, designed schemas for financial data storage',
-    v4: 'Containerized services with Docker, set up CI/CD pipelines',
     projectsLabel: 'Selected Projects',
     p1: 'Crypto exchange with C++ matching engine',
     p1d1: 'High-performance crypto exchange with C++ trading core. Architecture of 6 microservices: API Gateway, User, Account, Order, Portfolio and Matching Engine',
@@ -259,28 +233,6 @@ function App() {
             <div className="skill-row reveal"><dt>{s.infra}</dt><dd>{s.infraVal}</dd></div>
             <div className="skill-row reveal"><dt>{s.tools}</dt><dd>{s.toolsVal}</dd></div>
           </dl>
-        </div>
-      </section>
-
-      <section className="experience" aria-labelledby="exp-label">
-        <div className="wrap">
-          <span className="label reveal" id="exp-label">{s.expLabel}</span>
-          <div className="jobs">
-            <article className="job reveal">
-              <h2 className="job-title">{s.yandex}</h2>
-              <p className="job-meta">{s.yandexMeta}</p>
-              <ul className="job-points">
-                <li>{s.y1}</li><li>{s.y2}</li><li>{s.y3}</li><li>{s.y4}</li>
-              </ul>
-            </article>
-            <article className="job reveal">
-              <h2 className="job-title">{s.vtb}</h2>
-              <p className="job-meta">{s.vtbMeta}</p>
-              <ul className="job-points">
-                <li>{s.v1}</li><li>{s.v2}</li><li>{s.v3}</li><li>{s.v4}</li>
-              </ul>
-            </article>
-          </div>
         </div>
       </section>
 
