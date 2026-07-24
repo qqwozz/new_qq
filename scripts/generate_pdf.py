@@ -139,13 +139,13 @@ def generate():
     y = section(c, y, "Образование")
     y = job(c, y,
         "Факультет информационных технологий",
-        "Бакалавр · 2020 — 2024",
+        "Бакалавр · 2025 — н.в.",
         ["Разработка высоконагруженных систем, алгоритмы и структуры данных"]
     )
     y = job(c, y,
         "Дополнительные курсы",
-        "2023 — н.в.",
-        ["Algorithmic Trading (Coursera), System Design (Educative), Go (Udemy)"]
+        "2022 — н.в.",
+        ["Яндекс Лицей · IT Школа Samsung · Популярный курс по Git · Популярный курс по Go"]
     )
 
     # ─── Projects ───
@@ -169,6 +169,24 @@ def generate():
             "Production-ready Docker (Nginx + Gunicorn)",
         ],
         "Django · PostgreSQL · Redis · HTMX · Stripe · Docker"
+    )
+    y = project(c, y,
+        "AutoAdmin",
+        "API + Telegram-бот · 2024",
+        [
+            "API + Telegram-бот для записи клиентов на услуги с расписанием и подписками",
+            "Чистая архитектура, JWT-аутентификация, SQLite, Docker",
+        ],
+        "Go · SQLite · Telegram Bot API · JWT · Docker"
+    )
+    y = project(c, y,
+        "OAuth 2.0",
+        "Авторизация · 2024",
+        [
+            "Реализация OAuth 2.0 авторизации с поддержкой Authorization Code Flow",
+            "Go бэкенд, Shell-скрипты для автоматизации, HTML фронтенд",
+        ],
+        "Go · Shell · HTML"
     )
 
     # ─── Skills ───

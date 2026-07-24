@@ -27,11 +27,11 @@ const t: Record<Lang, Record<string, string>> = {
     v4: 'Настроил CI/CD пайплайны и Docker-контейнеризацию, время деплоя сокращено с 40 до 5 минут',
     eduLabel: 'Образование',
     edu1: 'Факультет информационных технологий',
-    edu1Meta: 'Бакалавр · 2020 — 2024',
+    edu1Meta: 'Бакалавр · 2025 — н.в.',
     edu1d: 'Разработка высоконагруженных систем, алгоритмы и структуры данных',
     edu2: 'Дополнительные курсы',
-    edu2Meta: '2023 — н.в.',
-    edu2d: 'Algorithmic Trading (Coursera), System Design (Educative), Go (Udemy)',
+    edu2Meta: '2022 — н.в.',
+    edu2d: 'Яндекс Лицей · IT Школа Samsung · Популярный курс по Git · Популярный курс по Go',
     projectsLabel: 'Избранные проекты',
     p2: 'Микросервис платежей',
     p2d1: 'Платёжная система с мультивалютными счетами и конвертацией по реальным курсам (200+ валют)',
@@ -41,8 +41,14 @@ const t: Record<Lang, Record<string, string>> = {
     p3d1: 'Полнофункциональный e-commerce с каталогом, фильтрацией, умной корзиной и приёмом платежей через Stripe',
     p3d2: 'Корзина без перезагрузки (HTMX), фильтрация по категориям, размерам, цене',
     p3d3: 'Production-ready Docker (Nginx + Gunicorn)',
+    p4: 'AutoAdmin',
+    p4d1: 'API + Telegram-бот для записи клиентов на услуги с расписанием и подписками',
+    p4d2: 'Чистая архитектура, JWT-аутентификация, SQLite, Docker',
+    p5: 'OAuth 2.0',
+    p5d1: 'Реализация OAuth 2.0 авторизации с поддержкой Authorization Code Flow',
+    p5d2: 'Go бэкенд, Shell-скрипты для автоматизации, HTML фронтенд',
     code: 'Код',
-    alsoText: 'AutoAdmin — API + Telegram-бот для записей (Go, SQLite). AI Chat Bot — NLP чат-бот на GigaChat (Python, Streamlit). Perl Log Analyzer — анализатор логов (Perl). OAuth 2.0 — авторизация (Go, Shell).',
+    alsoText: 'AI Chat Bot — NLP чат-бот на GigaChat (Python, Streamlit). Perl Log Analyzer — анализатор логов (Perl).',
     alsoMore: 'Все проекты на',
     contactLabel: 'Связаться',
     contactHeadline: 'Давайте создадим\nчто-нибудь вместе.',
@@ -83,8 +89,8 @@ const t: Record<Lang, Record<string, string>> = {
     edu1Meta: "Bachelor's · 2020 — 2024",
     edu1d: 'High-load systems development, algorithms and data structures',
     edu2: 'Additional courses',
-    edu2Meta: '2023 — present',
-    edu2d: 'Algorithmic Trading (Coursera), System Design (Educative), Go (Udemy)',
+    edu2Meta: '2022 — present',
+    edu2d: 'Yandex Lyceum · IT School Samsung · Popular Git Course · Popular Go Course',
     projectsLabel: 'Selected Projects',
     p2: 'Payment microservice',
     p2d1: 'Payment system with multi-currency accounts and real-time conversion (200+ currencies)',
@@ -94,8 +100,14 @@ const t: Record<Lang, Record<string, string>> = {
     p3d1: 'Full-featured e-commerce with catalog, filtering, smart cart and Stripe payments',
     p3d2: 'HTMX no-reload cart, filtering by categories, sizes, price',
     p3d3: 'Production-ready Docker (Nginx + Gunicorn)',
+    p4: 'AutoAdmin',
+    p4d1: 'API + Telegram bot for client appointment scheduling with subscriptions',
+    p4d2: 'Clean architecture, JWT auth, SQLite, Docker',
+    p5: 'OAuth 2.0',
+    p5d1: 'OAuth 2.0 authorization implementation with Authorization Code Flow',
+    p5d2: 'Go backend, Shell automation scripts, HTML frontend',
     code: 'Source',
-    alsoText: 'AutoAdmin — API + Telegram bot for appointments (Go, SQLite). AI Chat Bot — NLP chatbot on GigaChat (Python, Streamlit). Perl Log Analyzer — log analysis (Perl). OAuth 2.0 — authorization (Go, Shell).',
+    alsoText: 'AI Chat Bot — NLP chatbot on GigaChat (Python, Streamlit). Perl Log Analyzer — log analysis (Perl).',
     alsoMore: 'All projects on',
     contactLabel: 'Contact',
     contactHeadline: "Let's build\nsomething together.",
@@ -312,6 +324,34 @@ function App() {
               <div className="stack">Django<span className="dot">·</span>PostgreSQL<span className="dot">·</span>Redis<span className="dot">·</span>HTMX<span className="dot">·</span>Stripe<span className="dot">·</span>Docker</div>
               <div className="project-links">
                 <a href="https://github.com/qqwozz/enf-shop" target="_blank" rel="noopener noreferrer">{s.code} <span className="arrow">↗</span></a>
+              </div>
+            </article>
+
+            <article className="project reveal">
+              <h2 className="project-name">
+                <a href="https://github.com/qqwozz/autoadmin" target="_blank" rel="noopener noreferrer">AutoAdmin</a>
+              </h2>
+              <p className="project-meta">{s.p4}<span className="dot">·</span>2024</p>
+              <ul className="project-points">
+                <li>{s.p4d1}</li><li>{s.p4d2}</li>
+              </ul>
+              <div className="stack">Go<span className="dot">·</span>SQLite<span className="dot">·</span>Telegram Bot API<span className="dot">·</span>JWT<span className="dot">·</span>Docker</div>
+              <div className="project-links">
+                <a href="https://github.com/qqwozz/autoadmin" target="_blank" rel="noopener noreferrer">{s.code} <span className="arrow">↗</span></a>
+              </div>
+            </article>
+
+            <article className="project reveal">
+              <h2 className="project-name">
+                <a href="https://github.com/qqwozz/OAuth_2.0" target="_blank" rel="noopener noreferrer">OAuth 2.0</a>
+              </h2>
+              <p className="project-meta">{s.p5}<span className="dot">·</span>2024</p>
+              <ul className="project-points">
+                <li>{s.p5d1}</li><li>{s.p5d2}</li>
+              </ul>
+              <div className="stack">Go<span className="dot">·</span>Shell<span className="dot">·</span>HTML</div>
+              <div className="project-links">
+                <a href="https://github.com/qqwozz/OAuth_2.0" target="_blank" rel="noopener noreferrer">{s.code} <span className="arrow">↗</span></a>
               </div>
             </article>
           </div>
