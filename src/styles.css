@@ -203,13 +203,33 @@ a:hover .arrow.right { transform: translate(4px, 0); }
   text-wrap: pretty;
 }
 
+/* ─── Education ─── */
+.education { padding: 180px 0 0 0; }
+.edu-items { max-width: 660px; margin: 0 auto; }
+.edu-item { padding: 40px 0; border-top: 1px solid var(--hairline); text-align: center; }
+.edu-item:first-child { border-top: 0; padding-top: 0; }
+.edu-title { font-family: var(--serif); font-weight: 400; font-size: 26px; letter-spacing: -0.01em; margin: 0 0 8px 0; }
+.edu-meta { font-size: 15px; color: var(--muted); margin: 0 0 12px 0; }
+.edu-desc { font-size: 18px; line-height: 1.7; color: var(--ink-soft); margin: 0; }
+
 /* ─── Projects ─── */
 .work { padding: 180px 0 0 0; }
 .projects { display: flex; flex-direction: column; }
-.project { padding: 90px 0; border-top: 1px solid var(--hairline); text-align: center; transition: background 200ms ease; border-radius: 8px; }
+.project { padding: 90px 0; border-top: 1px solid var(--hairline); text-align: center; transition: background 200ms ease, transform 200ms ease, box-shadow 200ms ease; border-radius: 8px; }
 .project:first-of-type { padding-top: 8px; border-top: 0; }
 .project:last-of-type { padding-bottom: 8px; }
-.project:hover { background: rgba(0, 0, 0, 0.012); }
+.project:hover { background: rgba(0, 0, 0, 0.012); transform: translateY(-2px); box-shadow: 0 4px 24px rgba(0,0,0,0.04); }
+
+/* ─── Staggered project reveal ─── */
+.project:nth-child(1) { transition-delay: 0ms; }
+.project:nth-child(2) { transition-delay: 120ms; }
+.project:nth-child(3) { transition-delay: 240ms; }
+
+/* ─── Staggered skill reveal ─── */
+.skill-row:nth-child(1) { transition-delay: 0ms; }
+.skill-row:nth-child(2) { transition-delay: 80ms; }
+.skill-row:nth-child(3) { transition-delay: 160ms; }
+.skill-row:nth-child(4) { transition-delay: 240ms; }
 
 .project-name {
   font-family: var(--serif);
@@ -219,8 +239,8 @@ a:hover .arrow.right { transform: translate(4px, 0); }
   letter-spacing: -0.02em;
   margin: 0 0 16px 0;
 }
-.project-name a { border-bottom: 1px solid transparent; padding-bottom: 2px; transition: border-color 200ms ease, color 200ms ease; }
-.project-name a:hover { border-bottom-color: var(--ink); }
+.project-name a { border-bottom: 1px solid transparent; padding-bottom: 2px; transition: border-color 200ms ease, color 200ms ease, letter-spacing 200ms ease; }
+.project-name a:hover { border-bottom-color: var(--ink); letter-spacing: 0.01em; }
 
 .project-meta { font-size: 15px; color: var(--muted); margin: 0 0 44px 0; text-align: center; }
 .project-meta .dot { margin: 0 10px; color: var(--hairline); }
@@ -371,7 +391,7 @@ footer {
   .hero { padding-top: 80px; }
   .lang-switch { top: 20px; right: 24px; }
   .name { font-size: 48px; }
-  .skills, .experience, .work, .languages, .contact-section { padding-top: 100px; }
+  .skills, .experience, .education, .work, .languages, .contact-section { padding-top: 100px; }
   .skill-row { grid-template-columns: 1fr; gap: 8px; }
   .project { padding: 64px 0; }
   .scroll-top { bottom: 20px; right: 20px; width: 40px; height: 40px; font-size: 16px; }
@@ -391,7 +411,7 @@ footer {
   .bio { font-size: 18px; line-height: 1.7; }
   .contact { font-size: 14px; gap: 8px 18px; }
   .cv-download { font-size: 13px; padding: 10px 22px; }
-  .skills, .experience, .work, .languages, .contact-section { padding-top: 80px; }
+  .skills, .experience, .education, .work, .languages, .contact-section { padding-top: 80px; }
   .label { margin-bottom: 40px; }
   .skill-row { font-size: 16px; padding: 16px 0; }
   .skill-row dt { font-size: 11px; }
@@ -417,7 +437,7 @@ footer {
   a[href]::after { content: " (" attr(href) ")"; font-size: 0.8em; color: #666; }
   nav.contact a[href]::after, .foot-links a[href]::after { content: none; }
   .hero { padding-top: 0; }
-  .skills, .experience, .work, .languages, .contact-section { padding-top: 48px; }
+  .skills, .experience, .education, .work, .languages, .contact-section { padding-top: 48px; }
   footer { padding-top: 24px; margin-top: 24px; }
   .project { page-break-inside: avoid; }
   .job { page-break-inside: avoid; }

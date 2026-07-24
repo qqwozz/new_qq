@@ -25,6 +25,13 @@ const t: Record<Lang, Record<string, string>> = {
     v2: 'Реализовал REST API для интеграции с 4 внутренними системами банка, uptime 99.9%',
     v3: 'Спроектировал схемы PostgreSQL для хранения финансовых данных, оптимизировал запросы — снижение времени ответа на 30%',
     v4: 'Настроил CI/CD пайплайны и Docker-контейнеризацию, время деплоя сокращено с 40 до 5 минут',
+    eduLabel: 'Образование',
+    edu1: 'Факультет информационных технологий',
+    edu1Meta: 'Бакалавр · 2020 — 2024',
+    edu1d: 'Разработка высоконагруженных систем, алгоритмы и структуры данных',
+    edu2: 'Дополнительные курсы',
+    edu2Meta: '2023 — н.в.',
+    edu2d: 'Algorithmic Trading (Coursera), System Design (Educative), Go (Udemy)',
     projectsLabel: 'Избранные проекты',
     p2: 'Микросервис платежей',
     p2d1: 'Платёжная система с мультивалютными счетами и конвертацией по реальным курсам (200+ валют)',
@@ -71,6 +78,13 @@ const t: Record<Lang, Record<string, string>> = {
     v2: 'Implemented REST API integrating with 4 internal bank systems, 99.9% uptime',
     v3: 'Designed PostgreSQL schemas for financial data storage, optimized queries — 30% latency reduction',
     v4: 'Set up CI/CD pipelines and Docker containerization, deploy time reduced from 40 to 5 minutes',
+    eduLabel: 'Education',
+    edu1: 'Faculty of Information Technology',
+    edu1Meta: "Bachelor's · 2020 — 2024",
+    edu1d: 'High-load systems development, algorithms and data structures',
+    edu2: 'Additional courses',
+    edu2Meta: '2023 — present',
+    edu2d: 'Algorithmic Trading (Coursera), System Design (Educative), Go (Udemy)',
     projectsLabel: 'Selected Projects',
     p2: 'Payment microservice',
     p2d1: 'Payment system with multi-currency accounts and real-time conversion (200+ currencies)',
@@ -246,6 +260,24 @@ function App() {
               <ul className="job-points">
                 <li>{s.v1}</li><li>{s.v2}</li><li>{s.v3}</li><li>{s.v4}</li>
               </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section className="education" aria-labelledby="edu-label">
+        <div className="wrap">
+          <span className="label reveal" id="edu-label">{s.eduLabel}</span>
+          <div className="edu-items">
+            <article className="edu-item reveal">
+              <h2 className="edu-title">{s.edu1}</h2>
+              <p className="edu-meta">{s.edu1Meta}</p>
+              <p className="edu-desc">{s.edu1d}</p>
+            </article>
+            <article className="edu-item reveal">
+              <h2 className="edu-title">{s.edu2}</h2>
+              <p className="edu-meta">{s.edu2Meta}</p>
+              <p className="edu-desc">{s.edu2d}</p>
             </article>
           </div>
         </div>
