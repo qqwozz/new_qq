@@ -113,7 +113,7 @@ def generate():
     y -= 8 * mm
     c.setFont(BFONT, 11)
     c.setFillColor(MUTED)
-    c.drawCentredString(W / 2, y, "Backend Developer  ·  Python · Go · C++  ·  Москва, Россия")
+    c.drawCentredString(W / 2, y, "Backend Developer  ·  Python · Go · C++ · Rust  ·  Москва, Россия")
     y -= 6 * mm
     c.setFont(BFONT, 8.5)
     c.setFillColor(MUTED)
@@ -173,8 +173,8 @@ def generate():
 
     # ─── Skills ───
     y = section(c, y, "Стек")
-    y = skill_row(c, y, "Бэкенд", "Python (FastAPI, Django) · Go · C++ · gRPC · REST")
-    y = skill_row(c, y, "Данные", "PostgreSQL · Redis · SQLite")
+    y = skill_row(c, y, "Бэкенд", "Python (FastAPI, Django, Aiogram) · Go (Gin) · C++ · Rust · gRPC · REST")
+    y = skill_row(c, y, "Данные", "PostgreSQL · Redis · SQLite · Celery")
     y = skill_row(c, y, "Инфра", "Docker · Linux · Nginx · Gunicorn · GitHub Actions CI/CD")
     y = skill_row(c, y, "Инструменты", "Git · Postman · VS Code · HTMX")
 
