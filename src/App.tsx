@@ -11,13 +11,13 @@ const t: Record<Lang, Record<string, string>> = {
     bio: 'Backend-разработчик. Создаю микросервисы, API и high-load системы на Python, Go и C++. Чистая архитектура, производительность, надёжность.',
     skillsLabel: 'Основной стек',
     backend: 'Бэкенд',
-    backendVal: 'Python (FastAPI, Django) · Go · C++ · gRPC · REST',
+    backendVal: 'Python (FastAPI, Django, Aiogram) · Go (Gin) · C++ · gRPC · REST',
     data: 'Данные',
-    dataVal: 'PostgreSQL · Redis · SQLite',
+    dataVal: 'PostgreSQL · Redis · SQLite · Celery',
     infra: 'Инфраструктура',
     infraVal: 'Docker · Linux · Nginx · Gunicorn · GitHub Actions CI/CD',
     tools: 'Инструменты',
-    toolsVal: 'Git · Postman · VS Code · HTMX',
+    toolsVal: 'Git · Postman · VS Code · HTMX · OAuth 2.0 · Stripe API',
     projectsLabel: 'Избранные проекты',
     p1: 'Крипто-биржа с C++ matching engine',
     p1d1: 'Высокопроизводительная крипто-биржа с торговым ядром на C++. Архитектура из 6 микросервисов: API Gateway, User, Account, Order, Portfolio и Matching Engine',
@@ -32,8 +32,16 @@ const t: Record<Lang, Record<string, string>> = {
     p3d1: 'Полнофункциональный e-commerce с каталогом, фильтрацией, умной корзиной и приёмом платежей через Stripe',
     p3d2: 'Корзина без перезагрузки (HTMX), фильтрация по категориям, размерам, цене',
     p3d3: 'Production-ready Docker (Nginx + Gunicorn)',
+    p4: 'AutoAdmin',
+    p4meta: 'Telegram-бот для записи клиентов',
+    p4d1: 'API + Telegram-бот для записи клиентов на услуги с расписанием и подписками',
+    p4d2: 'Чистая архитектура, JWT-аутентификация, SQLite, Docker',
+    p5: 'OAuth 2.0',
+    p5meta: 'Авторизация',
+    p5d1: 'Реализация OAuth 2.0 авторизации с поддержкой Authorization Code Flow',
+    p5d2: 'Go бэкенд, Shell-скрипты для автоматизации, HTML фронтенд',
     code: 'Код',
-    alsoText: 'AutoAdmin — API + Telegram-бот для записей (Go, SQLite). AI Chat Bot — NLP чат-бот на GigaChat (Python, Streamlit).',
+    alsoText: 'AI Chat Bot — NLP чат-бот на GigaChat (Python, Streamlit). Perl Log Analyzer — анализатор логов (Perl).',
     alsoMore: 'Все проекты на',
     contactLabel: 'Связаться',
     contactHeadline: 'Давайте создадим\nчто-нибудь вместе.',
@@ -57,13 +65,13 @@ const t: Record<Lang, Record<string, string>> = {
     bio: 'Backend developer. I build microservices, APIs, and high-load systems with Python, Go, and C++. Clean architecture, performance, reliability.',
     skillsLabel: 'Core Stack',
     backend: 'Backend',
-    backendVal: 'Python (FastAPI, Django) · Go · C++ · gRPC · REST',
+    backendVal: 'Python (FastAPI, Django, Aiogram) · Go (Gin) · C++ · gRPC · REST',
     data: 'Data',
-    dataVal: 'PostgreSQL · Redis · SQLite',
+    dataVal: 'PostgreSQL · Redis · SQLite · Celery',
     infra: 'Infrastructure',
     infraVal: 'Docker · Linux · Nginx · Gunicorn · GitHub Actions CI/CD',
     tools: 'Tools',
-    toolsVal: 'Git · Postman · VS Code · HTMX',
+    toolsVal: 'Git · Postman · VS Code · HTMX · OAuth 2.0 · Stripe API',
     projectsLabel: 'Selected Projects',
     p1: 'Crypto exchange with C++ matching engine',
     p1d1: 'High-performance crypto exchange with C++ trading core. Architecture of 6 microservices: API Gateway, User, Account, Order, Portfolio and Matching Engine',
@@ -78,8 +86,16 @@ const t: Record<Lang, Record<string, string>> = {
     p3d1: 'Full-featured e-commerce with catalog, filtering, smart cart and Stripe payments',
     p3d2: 'HTMX no-reload cart, filtering by categories, sizes, price',
     p3d3: 'Production-ready Docker (Nginx + Gunicorn)',
+    p4: 'AutoAdmin',
+    p4meta: 'Telegram bot for client appointments',
+    p4d1: 'API + Telegram bot for client appointment scheduling with subscriptions',
+    p4d2: 'Clean architecture, JWT auth, SQLite, Docker',
+    p5: 'OAuth 2.0',
+    p5meta: 'Authorization',
+    p5d1: 'OAuth 2.0 authorization implementation with Authorization Code Flow',
+    p5d2: 'Go backend, Shell automation scripts, HTML frontend',
     code: 'Source',
-    alsoText: 'AutoAdmin — API + Telegram bot for appointments (Go, SQLite). AI Chat Bot — NLP chatbot on GigaChat (Python, Streamlit).',
+    alsoText: 'AI Chat Bot — NLP chatbot on GigaChat (Python, Streamlit). Perl Log Analyzer — log analysis (Perl).',
     alsoMore: 'All projects on',
     contactLabel: 'Contact',
     contactHeadline: "Let's build\nsomething together.",
@@ -178,6 +194,8 @@ function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [])
 
+  const pdfFile = lang === 'ru' ? 'Dima_Kiselev_Resume.pdf' : 'Dima_Kiselev_Resume_en.pdf'
+
   return (
     <main>
       <nav className="lang-switch" aria-label="Language">
@@ -216,7 +234,7 @@ function App() {
                 <span className="sep" aria-hidden="true">·</span>
                 <a href="mailto:offconix@gmail.com">Email</a>
               </nav>
-              <a href={`${import.meta.env.BASE_URL}qq/Dima_Kiselev_Resume.pdf`} download className="cv-download">
+              <a href={`${import.meta.env.BASE_URL}qq/${pdfFile}`} download className="cv-download">
                 {s.downloadCv}
               </a>
             </div>
@@ -281,6 +299,34 @@ function App() {
                 <a href="https://github.com/qqwozz/enf-shop" target="_blank" rel="noopener noreferrer">{s.code} <span className="arrow">↗</span></a>
               </div>
             </article>
+
+            <article className="project reveal">
+              <h2 className="project-name">
+                <a href="https://github.com/qqwozz/autoadmin" target="_blank" rel="noopener noreferrer">{s.p4}</a>
+              </h2>
+              <p className="project-meta">{s.p4meta}<span className="dot">·</span>2024</p>
+              <ul className="project-points">
+                <li>{s.p4d1}</li><li>{s.p4d2}</li>
+              </ul>
+              <div className="stack">Go<span className="dot">·</span>SQLite<span className="dot">·</span>Telegram Bot API<span className="dot">·</span>JWT<span className="dot">·</span>Docker</div>
+              <div className="project-links">
+                <a href="https://github.com/qqwozz/autoadmin" target="_blank" rel="noopener noreferrer">{s.code} <span className="arrow">↗</span></a>
+              </div>
+            </article>
+
+            <article className="project reveal">
+              <h2 className="project-name">
+                <a href="https://github.com/qqwozz/OAuth_2.0" target="_blank" rel="noopener noreferrer">{s.p5}</a>
+              </h2>
+              <p className="project-meta">{s.p5meta}<span className="dot">·</span>2024</p>
+              <ul className="project-points">
+                <li>{s.p5d1}</li><li>{s.p5d2}</li>
+              </ul>
+              <div className="stack">Go<span className="dot">·</span>Shell<span className="dot">·</span>HTML</div>
+              <div className="project-links">
+                <a href="https://github.com/qqwozz/OAuth_2.0" target="_blank" rel="noopener noreferrer">{s.code} <span className="arrow">↗</span></a>
+              </div>
+            </article>
           </div>
 
           <p className="also-note reveal">
@@ -308,6 +354,7 @@ function App() {
           <p className="contact-sub reveal">{s.contactSub}</p>
           <div className="contact-cta reveal">
             <a href="mailto:offconix@gmail.com" className="cv-download">{s.contactEmail} <span className="arrow right">→</span></a>
+            <a href="https://t.me/onixxed" target="_blank" rel="noopener noreferrer" className="cv-download">Telegram <span className="arrow">↗</span></a>
           </div>
         </div>
       </section>
