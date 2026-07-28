@@ -18,15 +18,6 @@ const t: Record<Lang, Record<string, string>> = {
     infraVal: 'Docker · Linux · Nginx · Gunicorn · GitHub Actions CI/CD',
     tools: 'Инструменты',
     toolsVal: 'Git · Postman · VS Code · HTMX · OAuth 2.0 · Stripe API',
-    expLabel: 'Опыт',
-    vtb: 'Backend-разработчик (стажёр) — ВТБ',
-    vtbMeta: 'Стажировка · Сен 2025 — Июн 2026 · Москва',
-    v1: 'Разрабатывал высоконагруженный API-шлюз на Go (Gin, gRPC) — >1000 RPS',
-    v2: 'Разбор 10+ инцидентов L2: анализ логов в ELK, выявление первопричин, 2 решения внесены в базу знаний',
-    v3: 'Дашборды в Grafana (CPU, память, latency) и алерты в Prometheus с пороговыми значениями',
-    v4: 'Оптимизация SQL-запросов (JOIN, оконные функции) для PostgreSQL и Oracle, проверка целостности после миграций',
-    v5: '5+ Python-скриптов для автоматического сбора логов — сокращение ручной проверки на 40%',
-    v6: 'Техническая документация, регламенты мониторинга, спринты и задачи в Jira/Confluence',
     eduLabel: 'Образование',
     edu1: 'Факультет информационных технологий',
     edu1Meta: 'Бакалавр · 2025 — н.в.',
@@ -79,15 +70,6 @@ const t: Record<Lang, Record<string, string>> = {
     infraVal: 'Docker · Linux · Nginx · Gunicorn · GitHub Actions CI/CD',
     tools: 'Tools',
     toolsVal: 'Git · Postman · VS Code · HTMX · OAuth 2.0 · Stripe API',
-    expLabel: 'Experience',
-    vtb: 'Backend Developer (intern) — VTB',
-    vtbMeta: 'Internship · Sep 2025 — Jun 2026 · Moscow',
-    v1: 'Built high-load API gateway on Go (Gin, gRPC) — handling >1000 RPS',
-    v2: 'Resolved 10+ L2 incidents: ELK log analysis, root cause identification, 2 solutions added to knowledge base',
-    v3: 'Grafana dashboards (CPU, memory, latency) and Prometheus alerts with threshold values',
-    v4: 'Optimized complex SQL queries (JOINs, window functions) for PostgreSQL and Oracle, post-migration data integrity checks',
-    v5: '5+ Python scripts for automated log collection — reduced manual review time by 40%',
-    v6: 'Technical documentation, monitoring runbooks, sprint planning and Jira/Confluence task tracking',
     eduLabel: 'Education',
     edu1: 'Faculty of Information Technology',
     edu1Meta: "Bachelor's · 2020 — 2024",
@@ -265,21 +247,6 @@ function App() {
             <div className="skill-row reveal"><dt>{s.infra}</dt><dd>{s.infraVal}</dd></div>
             <div className="skill-row reveal"><dt>{s.tools}</dt><dd>{s.toolsVal}</dd></div>
           </dl>
-        </div>
-      </section>
-
-      <section className="experience" aria-labelledby="exp-label">
-        <div className="wrap">
-          <span className="label reveal" id="exp-label">{s.expLabel}</span>
-          <div className="jobs">
-            <article className="job reveal">
-              <h2 className="job-title">{s.vtb}</h2>
-              <p className="job-meta">{s.vtbMeta}</p>
-              <ul className="job-points">
-                <li>{s.v1}</li><li>{s.v2}</li><li>{s.v3}</li><li>{s.v4}</li><li>{s.v5}</li><li>{s.v6}</li>
-              </ul>
-            </article>
-          </div>
         </div>
       </section>
 
