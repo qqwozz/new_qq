@@ -19,11 +19,6 @@ const t: Record<Lang, Record<string, string>> = {
     tools: 'Инструменты',
     toolsVal: 'Git · Postman · VS Code · HTMX · OAuth 2.0 · Stripe API',
     projectsLabel: 'Избранные проекты',
-    p1: 'Крипто-биржа с C++ matching engine',
-    p1d1: 'Высокопроизводительная крипто-биржа с торговым ядром на C++. Архитектура из 6 микросервисов: API Gateway, User, Account, Order, Portfolio и Matching Engine',
-    p1d2: 'Обрабатывает 1000+ ордеров/сек с латентностью <100мс',
-    p1d3: 'Matching engine на C++ с Price-Time Priority, limit и market ордера',
-    p1d4: 'JWT аутентификация, React фронтенд',
     p2: 'Микросервис платежей',
     p2d1: 'Платёжная система с мультивалютными счетами и конвертацией по реальным курсам (200+ валют)',
     p2d2: 'C++ антифрод-движок проверяет velocity <1мс, Python скоринг блокирует подозрительные транзакции',
@@ -73,11 +68,6 @@ const t: Record<Lang, Record<string, string>> = {
     tools: 'Tools',
     toolsVal: 'Git · Postman · VS Code · HTMX · OAuth 2.0 · Stripe API',
     projectsLabel: 'Selected Projects',
-    p1: 'Crypto exchange with C++ matching engine',
-    p1d1: 'High-performance crypto exchange with C++ trading core. Architecture of 6 microservices: API Gateway, User, Account, Order, Portfolio and Matching Engine',
-    p1d2: 'Handles 1000+ orders/sec with <100ms latency',
-    p1d3: 'Matching engine in C++ with Price-Time Priority, limit and market orders',
-    p1d4: 'JWT authentication, React frontend',
     p2: 'Payment microservice',
     p2d1: 'Payment system with multi-currency accounts and real-time conversion (200+ currencies)',
     p2d2: 'C++ anti-fraud engine checks velocity <1ms, Python scoring blocks suspicious transactions',
@@ -258,20 +248,6 @@ function App() {
         <div className="wrap">
           <span className="label reveal" id="work-label">{s.projectsLabel}</span>
           <div className="projects">
-            <article className="project reveal">
-              <h2 className="project-name">
-                <a href="https://github.com/qqwozz/QW_Trading_Platform" target="_blank" rel="noopener noreferrer">QW Trading Platform</a>
-              </h2>
-              <p className="project-meta">{s.p1}<span className="dot">·</span>2024</p>
-              <ul className="project-points">
-                <li>{s.p1d1}</li><li>{s.p1d2}</li><li>{s.p1d3}</li><li>{s.p1d4}</li>
-              </ul>
-              <div className="stack">Go<span className="dot">·</span>C++17<span className="dot">·</span>PostgreSQL<span className="dot">·</span>Redis<span className="dot">·</span>gRPC<span className="dot">·</span>Docker<span className="dot">·</span>React</div>
-              <div className="project-links">
-                <a href="https://github.com/qqwozz/QW_Trading_Platform" target="_blank" rel="noopener noreferrer">{s.code} <span className="arrow">↗</span></a>
-              </div>
-            </article>
-
             <article className="project reveal">
               <h2 className="project-name">
                 <a href="https://github.com/qqwozz/qw_pay" target="_blank" rel="noopener noreferrer">QW Pay</a>
