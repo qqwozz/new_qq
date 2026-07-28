@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://qqwozz.github.io/new_qq/sitemap.xml

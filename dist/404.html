@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 — Страница не найдена</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root { --bg: #FAFAF7; --ink: #1A1A1A; --muted: #8A8780; --serif: "Instrument Serif", Georgia, serif; --body: "EB Garamond", Georgia, serif; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--ink); font-family: var(--body); display: flex; align-items: center; justify-content: center; min-height: 100vh; text-align: center; }
+    .wrap { padding: 0 24px; }
+    .code { font-family: var(--serif); font-size: clamp(80px, 15vw, 140px); line-height: 1; letter-spacing: -0.04em; margin-bottom: 16px; }
+    .msg { font-size: 20px; color: var(--muted); margin-bottom: 40px; }
+    a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--ink); padding-bottom: 2px; transition: opacity 160ms ease; }
+    a:hover { opacity: 0.6; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="code">404</div>
+    <p class="msg">Страница потерялась. Может, её никогда и не было.</p>
+    <a href="/new_qq/">Вернуться на главную</a>
+  </div>
+</body>
+</html>
