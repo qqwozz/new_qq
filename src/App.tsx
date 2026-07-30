@@ -8,7 +8,7 @@ const t: Record<Lang, Record<string, string>> = {
     role: 'Backend-разработчик',
     stack: 'Python · Go · C++ · Rust',
     location: 'Москва, Россия',
-    bio: 'Пишу код, который работает быстро и не ломается. Микросервисы, API, high-load — Python, Go, C++, Rust. Банковская инфраструктура в ВТБ.',
+    bio: 'Пишу код, который работает быстро и не ломается. Микросервисы, API, high-load — Python, Go, C++, Rust.',
     skillsLabel: 'Основной стек',
     backend: 'Бэкенд',
     backendVal: 'Python (FastAPI, Django, Aiogram) · Go (Gin) · C++ · Rust · gRPC · REST',
